@@ -93,7 +93,7 @@ By default, the motor configuration sets a safe top motor RPM. If you wish to ch
 
 ![image](https://github.com/user-attachments/assets/aadc9ec2-66c4-42a6-a253-1abec0a36e1a)
 
-# Hokuyo 10LX Ethernet Connection Setup¶
+# 2. Hokuyo 10LX Ethernet Connection Setup¶
 
 **Note**
 
@@ -119,7 +119,7 @@ Open Network Configuration in the Linux GUI on the Jetson NX. In the IPv4 tab, a
 
 Call the connection Hokuyo. Save the connection and close the network configuration GUI.
 
-When you plug in the 10LX make sure that the Hokuyo connection is selected. If everything is configured properly, you should now be able to ping `192.168.0.10`.
+When you plug in the 10LX, make sure that the Hokuyo connection is selected. If everything is configured properly, you should now be able to ping `192.168.0.10`.
 
 
 # References:
