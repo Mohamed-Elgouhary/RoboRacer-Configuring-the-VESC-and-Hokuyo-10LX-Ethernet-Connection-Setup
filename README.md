@@ -93,5 +93,34 @@ By default, the motor configuration sets a safe top motor RPM. If you wish to ch
 
 ![image](https://github.com/user-attachments/assets/aadc9ec2-66c4-42a6-a253-1abec0a36e1a)
 
+# Hokuyo 10LX Ethernet Connection Setup¶
+
+**Note**
+
+If you have a 30LX or a LIDAR that connects via USB, you can skip this section.
+
+**Equipment Required:**
+
+- Fully built RoboRacer vehicle with a Hokuyo 10LX lidar.
+- Pit/Host Laptop OR.
+- External monitor/display, HDMI cable, keyboard, mouse.
+
+**Approximate Time Investment:** 30 minutes
+
+Connect to the Jetson NX either via SSH or a wired connection (monitor, keyboard, mouse).
+
+In order to utilize the 10LX, you must first configure the eth0 network. From the factory, the 10LX is assigned the following IP: `192.168.0.10`. Note that the lidar is on subnet 0.
+
+Open Network Configuration in the Linux GUI on the Jetson NX. In the IPv4 tab, add a route such that the eth0 port is assigned
+
+- IP address `192.168.0.15`
+- Subnet mask is `255.255.255.0`
+- Gateway is `192.168.0.10`
+
+Call the connection Hokuyo. Save the connection and close the network configuration GUI.
+
+When you plug in the 10LX make sure that the Hokuyo connection is selected. If everything is configured properly, you should now be able to ping `192.168.0.10`.
+
+
 # References:
 [Roboracer Official Website](https://roboracer.ai/)
