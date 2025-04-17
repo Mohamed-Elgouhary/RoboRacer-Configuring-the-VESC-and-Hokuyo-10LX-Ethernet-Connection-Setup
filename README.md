@@ -17,12 +17,15 @@
 
 **Note**
 
-If using the VESC mkIV, e.g. hardware based on VESC 4.12, see [here](https://github.com/Mohamed-Elgouhary/vesc_firmware) for more details on how you can build your firmware for corresponding VESCs, and prebuilt firmware for different VESC hardware versions.
+If using the VESC mkIV, e.g., hardware based on VESC 4.12, see [here](https://github.com/Mohamed-Elgouhary/vesc_firmware) for more details on how you can build your firmware for corresponding VESCs, and prebuilt firmware for different VESC hardware versions.
 
 **1. Installing the VESC Tool**
 
-We need to configure the VESC so that it works with our motor and vehicle transmission. Before you start, you’ll need to install the [VESC Tool](https://vesc-project.com/vesc_tool). You’ll have to register for an account to download. Add the free tier tool to cart (you don’t have to fill in any information other than your email.) After checkout, a download link will be sent to your email address. There should be versions of the software for Linux, Windows and macOS.
+We need to configure the VESC so that it works with our motor and vehicle transmission. Before you start, you’ll need to install the [VESC Tool](https://vesc-project.com/vesc_tool). You’ll have to register for an account to download. Add the free tier tool to the cart (you don’t have to fill in any information other than your email). After checkout, a download link will be sent to your email address. There should be versions of the software for Linux, Windows, and macOS.
 
 **2. Powering the VESC**
 
-First we need to power the VESC. Plug the battery in, and make sure the polarity is correct. Note that you don’t need to turn on the Powerboard for configuring the VESC.
+First, we need to power the VESC. Plug the battery in, and make sure the polarity is correct. Note that you don’t need to turn on the Powerboard for configuring the VESC.
+
+![vesc01](https://github.com/user-attachments/assets/eb1be3ec-2ea5-4ef6-9da7-385947f84a4c)
+<p align="center"><strong>Notice that the device is /dev/nvme0n1p1</strong></p>
