@@ -41,13 +41,13 @@ Launch the VESC Tool. On the Welcome page, press the AutoConnect button on botto
 
 **4. Updating the Firmware on the VESC**
 
-The first thing you’ll need to do is to update the firmware onboard the VESC. Depending on the version of the VESC tool you’re using, you’ll need to go through different steps to enable servo out from the ppm port on the VESC.
+The first thing you’ll need to do is update the firmware onboard the VESC. Depending on the version of the VESC tool you’re using, you’ll need to go through different steps to enable servo out from the PPM port on the VESC.
 
-With VESC Tool versions released after Mar. 31 2021, you can use the latest default firmware. And to enable servo out, go to App Settings > General > Enable Servo Output in the VESC Tool to enable servo out.
+With VESC Tool versions released after Mar. 31, 2021, you can use the latest default firmware. And to enable servo out, go to App Settings > General > Enable Servo Output in the VESC Tool to enable servo out.
 
 ![image](https://github.com/user-attachments/assets/8277efbe-efba-43c5-8e68-cc1d3471e924)
 
-Before VESC Tool version 2.05, you can enable servo out by using a non-default firmware. On the left side of the screen, click on the Firmware tab. On bottom left of the page, check the Show non-default firmwares check box. On the right, you should see extra firmware options show up. Select the VESC_servoout.bin option. Afterwards, on the bottom right of the page, press the button with the down arrow to update the firmware on the connected VESC. A status bar at the bottom of the page will show firmware update status. After it’s finished, follow the prompt on screen.
+Before VESC Tool version 2.05, you could enable servo out by using a non-default firmware. On the left side of the screen, click on the Firmware tab. On the bottom left of the page, check the Show non-default firmwares check box. On the right, you should see extra firmware options show up. Select the VESC_servoout.bin option. Afterwards, on the bottom right of the page, press the button with the down arrow to update the firmware on the connected VESC. A status bar at the bottom of the page will show firmware update status. After it’s finished, follow the prompt on screen.
 
 ![image](https://github.com/user-attachments/assets/fce508b7-6d8d-485c-9482-1b1b0e0ff884)
 
@@ -59,7 +59,7 @@ After firmware update, Select Load Motor Configuration XML from the drop-down me
 
 **6. Detecting and Calculating Motor Parameters**
 
-To detect and calculate the FOC motor parameters, navigate to the FOC tab under Motor Settings on the left. At the bottom of the screen, follow the direction of the arrows and clck on the four buttons one by one, and follow the on screen prompt. Note that during the measuring process, the motor will make noise and spin, make sure the wheels of your vehicle are clear.
+To detect and calculate the FOC motor parameters, navigate to the FOC tab under Motor Settings on the left. At the bottom of the screen, follow the direction of the arrows and click on the four buttons one by one, and follow the on-screen prompt. Note that during the measuring process, the motor will make noise and spin; make sure the wheels of your vehicle are clear.
 
 ![image](https://github.com/user-attachments/assets/e2c376fa-e948-4a3e-bdec-63aeefa4500b)
 
@@ -69,13 +69,13 @@ After the motor parameters are measured, the fields at the bottom of the screen 
 
 **7. Changing the Openloop Hysteresis and Openloop Time**
 
-Navigate to the Sensorless tab on top of the screen. Change the Openloop Hysteresis and Openloop Time to 0.01, and click the Write Motor Configuration button.
+Navigate to the Sensorless tab at the top of the screen. Change the Openloop Hysteresis and Openloop Time to 0.01, and click the Write Motor Configuration button.
 
 ![image](https://github.com/user-attachments/assets/8c8cb4a8-b005-406c-953f-5392b42cd634)
 
 **8. Tuning the PID controller**
 
-Now you can start tuning the speed PID controller. To see the RPM response from the motor, navigate to the Realtime Data tab under Data Analysis on the left. Click Stream Realtime Data button on the right (the button with letters RT), and navigate to the RPM tab on the top of the screen. You should see RPM data streaming now.
+Now you can start tuning the speed PID controller. To see the RPM response from the motor, navigate to the Realtime Data tab under Data Analysis on the left. Click the Stream Realtime Data button on the right (the button with letters RT), and navigate to the RPM tab on the top of the screen. You should see RPM data streaming now.
 
 ![image](https://github.com/user-attachments/assets/0d833a8d-5395-4cad-9cdd-56a836277fd6)
 
@@ -83,13 +83,15 @@ To create a step response for the motor, you can set a target RPM at the bottom 
 
 ![image](https://github.com/user-attachments/assets/2532c0f5-3bcf-4b1f-a7d1-5dcd35bbfc3d)
 
-You want to look for a clean step response that has a quick rise time and zero to very little steady state error. Adjust the gains accordingly by navigating to the PID Controllers tab under Motor Settings on the left, and change the Speed Controller gains. General rules of tuning PID gains apply. If you’re seeing a lot of oscillations, try changing the Speed PID Kd Filter.
+You want to look for a clean step response that has a quick rise time and zero to very little steady-state error. Adjust the gains accordingly by navigating to the PID Controllers tab under Motor Settings on the left, and changing the Speed Controller gains. General rules of tuning PID gains apply. If you’re seeing a lot of oscillations, try changing the Speed PID Kd Filter.
 
 ![image](https://github.com/user-attachments/assets/f0b9de3b-1c0a-4f05-9a93-32461bee08ed)
 
 **9. Changing the hardware speed limit**
 
-By default, the motor configuration sets a safe top motor RPM. If you wish to change the hard limit set by the VESC firmware, you can go to Motor Settings > General, and change the max ERPM for forward and backwards rotations. You’ll also have to change the configuration file mentioned in the Odometry Tuning section in the software stack setup to change the software limit for your motor ERPM.
+By default, the motor configuration sets a safe top motor RPM. If you wish to change the hard limit set by the VESC firmware, you can go to Motor Settings > General and change the max ERPM for forward and backwards rotations. You’ll also have to change the configuration file mentioned in the Odometry Tuning section in the software stack setup to change the software limit for your motor ERPM.
 
 ![image](https://github.com/user-attachments/assets/aadc9ec2-66c4-42a6-a253-1abec0a36e1a)
 
+# References:
+[Roboracer Official Website](https://roboracer.ai/)
